@@ -4,3 +4,9 @@
 
 
 Extract structured data from the minecraft wiki
+
+## History
+
+### 0.0.0
+
+* imported from minecraft-data
