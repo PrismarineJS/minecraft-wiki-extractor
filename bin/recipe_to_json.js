@@ -6,7 +6,7 @@ var recipeFilePath=process.argv[2];
 var existingItems=require(process.argv[3]);
 var existingBlocks=require(process.argv[4]);
 
-var writeAllRecipes=require("./lib/recipe_extractor")(existingItems,existingBlocks).writeAllRecipes;
+var writeAllRecipes=require("./../lib/recipe_extractor")(existingItems,existingBlocks).writeAllRecipes;
 
 writeAllRecipes(recipeFilePath,function(err){
   if(err) {

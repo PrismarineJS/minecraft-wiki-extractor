@@ -6,7 +6,7 @@ var blockFilePath=process.argv[2];
 var existingItems=require(process.argv[3]);
 var existingBlocks=require(process.argv[4]);
 
-var writeAllBlocks=require("./lib/block_extractor")(existingItems,existingBlocks).writeAllBlocks;
+var writeAllBlocks=require("./../lib/block_extractor")(existingItems,existingBlocks).writeAllBlocks;
 
 writeAllBlocks(blockFilePath,function(err){
   if(err) {

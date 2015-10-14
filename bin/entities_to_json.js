@@ -4,7 +4,7 @@ if(process.argv.length !=3) {
 }
 var entitiesFilePath=process.argv[2];
 
-var writeAllEntities=require("./lib/entities_extractor").writeAllEntities;
+var writeAllEntities=require("./../lib/entities_extractor").writeAllEntities;
 
 writeAllEntities(entitiesFilePath,function(err){
   if(err) {

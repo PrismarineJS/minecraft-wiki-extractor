@@ -4,7 +4,7 @@ if(process.argv.length !=3) {
 }
 var itemFilePath=process.argv[2];
 
-var writeAllItems=require("./lib/item_extractor").writeAllItems;
+var writeAllItems=require("./../lib/item_extractor").writeAllItems;
 
 writeAllItems(itemFilePath,function(err){
   if(err) {
