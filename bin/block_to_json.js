@@ -3,8 +3,9 @@ if(process.argv.length <5 || process.argv.length >6) {
   process.exit(1);
 }
 var blockFilePath=process.argv[2];
-var existingItems=require(process.argv[3]);
-var existingBlocks=require(process.argv[4]);
+var fs=require("fs");
+var existingItems=JSON.parse(fs.readFileSync(process.argv[3]));
+var existingBlocks=JSON.parse(fs.readFileSync(process.argv[4]));
 var date=process.argv[5] ? process.argv[5] : "2015-05-07T00:00:00Z";
 
 var writeAllBlocks=require("./../lib/block_extractor")(existingItems,existingBlocks).writeAllBlocks;
