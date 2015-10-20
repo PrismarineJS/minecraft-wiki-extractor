@@ -23,4 +23,11 @@ describe("item_extractor",function(){
       cb();
     });
   });
+
+  it("get Beetroot Seeds infobox",function(cb){
+    item_extractor.itemInfobox("Beetroot Seeds",function(err,data){
+      console.log(data);
+      cb();
+    });
+  });
 });
