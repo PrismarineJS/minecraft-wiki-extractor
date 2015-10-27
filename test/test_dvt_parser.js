@@ -8,7 +8,7 @@ var dvtParser=new DvtParser(wikiTextParser);
 
 
 describe("dvt parser",function(){
-  var date="2015-05-07T00:00:00Z";
+  var date="2015-10-20T00:00:00Z";
 // testing : several data value in the page
   it("get data value of slabs",function(cb){
     dvtParser.wikiTextParser.getFixedArticle("Slabs",date, function (err, data) {

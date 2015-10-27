@@ -6,7 +6,8 @@ var wikiTextParser = new WikiTextParser('minecraft.gamepedia.com');
 var block_extractor = require("./../lib/block_extractor.js")([],[]);
 
 describe("block_extractor",function(){
-  var date="2015-05-07T00:00:00Z";
+  this.timeout(10 * 1000);
+  var date="2015-10-28T00:00:00Z";
   it("extract nether brick fence infobox",function(done){
     block_extractor.blockInfobox("Nether Brick Fence",date,function(err,data){
       console.log(data);
@@ -59,6 +60,16 @@ describe("block_extractor",function(){
     });
   });
 
+  it("extract Ladder infobox",function(done){
+    block_extractor.blockInfobox("Ladder",date,function(err,data){
+      if(err) {
+        return done(err);
+      }
+      console.log(data);
+      done();
+    });
+  });
+
   it("extract wood infobox",function(done){
     wikiTextParser.getFixedArticle("Wood",date, function (err, data) {
       var sectionObject = wikiTextParser.pageToSectionObject(data);
@@ -86,6 +97,32 @@ describe("block_extractor",function(){
 // starting with {{about
   it("extract carrot",function(done){
     wikiTextParser.getFixedArticle("Carrot",date, function (err, data) {
+      var sectionObject = wikiTextParser.pageToSectionObject(data);
+
+      console.log(sectionObject["content"]);
+      var infoBox = wikiTextParser.parseInfoBox(sectionObject["content"]);
+      var values = infoBox["values"];
+      console.log(values);
+      done();
+    });
+  });
+
+// starting with {{quote
+  it("extract ladder",function(done){
+    wikiTextParser.getFixedArticle("Ladder",date, function (err, data) {
+      var sectionObject = wikiTextParser.pageToSectionObject(data);
+
+      console.log(sectionObject["content"]);
+      var infoBox = wikiTextParser.parseInfoBox(sectionObject["content"]);
+      var values = infoBox["values"];
+      console.log(values);
+      done();
+    });
+  });
+
+// with templates on its own line
+  it("extract gravel",function(done){
+    wikiTextParser.getFixedArticle("Gravel",date, function (err, data) {
       var sectionObject = wikiTextParser.pageToSectionObject(data);
 
       console.log(sectionObject["content"]);
