@@ -7,6 +7,10 @@ Extract structured data from the minecraft wiki
 
 ## History
 
+### 0.1.1
+
+* takes first variation of entity
+
 ### 0.1.0
 
 * fixed date extractors
