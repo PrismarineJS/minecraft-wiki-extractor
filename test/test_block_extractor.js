@@ -60,6 +60,16 @@ describe("block_extractor",function(){
     });
   });
 
+  it("extract Block of Redstone",function(done){
+    block_extractor.blockInfobox("Block of Redstone",date,function(err,data){
+      if(err) {
+        return done(err);
+      }
+      console.log(data);
+      done();
+    });
+  });
+
   it("extract Ladder infobox",function(done){
     block_extractor.blockInfobox("Ladder",date,function(err,data){
       if(err) {
