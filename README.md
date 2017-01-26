@@ -7,6 +7,17 @@ Extract structured data from the minecraft wiki
 
 ## History
 
+### 0.2.0
+
+* add transparent property to block extractor
+* extract filterLight and emitLight
+* various improvement to be more flexible and handle 1.7-date revisions
+* add mcpe extraction support
+* add fixes and checks for mcpe 0.15 extraction
+* add enchantments extractor (thanks @plexigras)
+* add pe 1.0 date
+* adapt entity extractor to new page
+
 ### 0.1.1
 
 * takes first variation of entity
