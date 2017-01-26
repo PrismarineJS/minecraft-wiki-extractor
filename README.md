@@ -7,6 +7,10 @@ Extract structured data from the minecraft wiki
 
 ## History
 
+### 0.2.1
+
+* fix a parsing bug in entities extractor
+
 ### 0.2.0
 
 * add transparent property to block extractor
