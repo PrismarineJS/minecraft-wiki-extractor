@@ -7,12 +7,12 @@
     "test": "mocha --reporter spec"
   },
   "dependencies": {
-    "async": "~2.1.5",
-    "lua.vm.js": "0.0.1",
+    "async": "^2.3.0",
+    "lua.vm.js": "^0.0.1",
     "parse-wikitext": "^0.3.3"
   },
   "devDependencies": {
-    "mocha": "~3.2.0"
+    "mocha": "^3.2.0"
   },
   "repository": {
     "type": "git",
