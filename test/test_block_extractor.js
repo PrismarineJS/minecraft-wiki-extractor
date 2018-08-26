@@ -7,7 +7,7 @@ var block_extractor = require("./../lib/block_extractor.js")([],[]);
 
 describe("block_extractor",function(){
   this.timeout(10 * 1000);
-  var date="2015-10-28T00:00:00Z";
+  var date="2017-12-28T00:00:00Z";
   it("extract nether brick fence infobox",function(done){
     block_extractor.blockInfobox("Nether Brick Fence",date,function(err,data){
       console.log(data);
