@@ -12,7 +12,7 @@
     "parse-wikitext": "^1.0.0"
   },
   "devDependencies": {
-    "mocha": "^5.2.0"
+    "mocha": "^6.0.0"
   },
   "repository": {
     "type": "git",
