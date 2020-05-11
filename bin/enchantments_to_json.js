@@ -1,5 +1,5 @@
 if(process.argv.length <3 || process.argv.length >4) {
-  console.log("Usage : node enchantments_to_json.js <entities.json> [<wikidate>]");
+  console.log("Usage : node enchantments_to_json.js <enchantments.json> [<wikidate>]");
   process.exit(1);
 }
 var enchantmentsFilePath=process.argv[2];
