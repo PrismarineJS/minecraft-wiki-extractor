@@ -7,7 +7,7 @@
     "test": "mocha --reporter spec"
   },
   "dependencies": {
-    "async": "^2.6.1",
+    "async": "^3.2.0",
     "lua.vm.js": "^0.0.1",
     "parse-wikitext": "^1.0.0"
   },
