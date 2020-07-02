@@ -5,7 +5,8 @@ if (process.argv.length < 4 || process.argv.length > 5) {
 var foodFilePath = process.argv[2];
 var fs = require("fs");
 var existingItems = JSON.parse(fs.readFileSync(process.argv[3]));
-var date = process.argv[5] ? process.argv[5] : "2015-05-07T00:00:00Z";
+var date = process.argv[4] ? process.argv[4] : "2050-05-07T00:00:00Z";
+
 
 var writeAllFoods = require("./../lib/food_extractor")(existingItems).writeAllFoods;
 
