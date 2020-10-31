@@ -2,14 +2,14 @@
 
 // blocks tests
 
-var WikiTextParser = require('parse-wikitext')
-var wikiTextParser = new WikiTextParser('minecraft.gamepedia.com')
+const WikiTextParser = require('parse-wikitext')
+const wikiTextParser = new WikiTextParser('minecraft.gamepedia.com')
 
-var blockExtractor = require('./../lib/block_extractor.js')([], [])
+const blockExtractor = require('./../lib/block_extractor.js')([], [])
 
 describe('block_extractor', function () {
   this.timeout(10 * 1000)
-  var date = '2017-12-28T00:00:00Z'
+  const date = '2017-12-28T00:00:00Z'
   it('extract nether brick fence infobox', function (done) {
     blockExtractor.blockInfobox('Nether Brick Fence', date, function (err, data) {
       if (err) {
@@ -116,10 +116,10 @@ describe('block_extractor', function () {
         done(err)
         return
       }
-      var sectionObject = wikiTextParser.pageToSectionObject(data)
+      const sectionObject = wikiTextParser.pageToSectionObject(data)
 
-      var infoBox = wikiTextParser.parseInfoBox(sectionObject.content)
-      var values = infoBox.values
+      const infoBox = wikiTextParser.parseInfoBox(sectionObject.content)
+      const values = infoBox.values
       console.log(values)
       done()
     })
@@ -132,11 +132,11 @@ describe('block_extractor', function () {
         done(err)
         return
       }
-      var sectionObject = wikiTextParser.pageToSectionObject(data)
+      const sectionObject = wikiTextParser.pageToSectionObject(data)
 
       console.log(sectionObject.content)
-      var infoBox = wikiTextParser.parseInfoBox(sectionObject.content)
-      var values = infoBox.values
+      const infoBox = wikiTextParser.parseInfoBox(sectionObject.content)
+      const values = infoBox.values
       console.log(values)
       done()
     })
@@ -149,11 +149,11 @@ describe('block_extractor', function () {
         done(err)
         return
       }
-      var sectionObject = wikiTextParser.pageToSectionObject(data)
+      const sectionObject = wikiTextParser.pageToSectionObject(data)
 
       console.log(sectionObject.content)
-      var infoBox = wikiTextParser.parseInfoBox(sectionObject.content)
-      var values = infoBox.values
+      const infoBox = wikiTextParser.parseInfoBox(sectionObject.content)
+      const values = infoBox.values
       console.log(values)
       done()
     })
@@ -166,11 +166,11 @@ describe('block_extractor', function () {
         done(err)
         return
       }
-      var sectionObject = wikiTextParser.pageToSectionObject(data)
+      const sectionObject = wikiTextParser.pageToSectionObject(data)
 
       console.log(sectionObject.content)
-      var infoBox = wikiTextParser.parseInfoBox(sectionObject.content)
-      var values = infoBox.values
+      const infoBox = wikiTextParser.parseInfoBox(sectionObject.content)
+      const values = infoBox.values
       console.log(values)
       done()
     })
@@ -183,11 +183,11 @@ describe('block_extractor', function () {
         done(err)
         return
       }
-      var sectionObject = wikiTextParser.pageToSectionObject(data)
+      const sectionObject = wikiTextParser.pageToSectionObject(data)
 
       console.log(sectionObject.content)
-      var infoBox = wikiTextParser.parseInfoBox(sectionObject.content)
-      var values = infoBox.values
+      const infoBox = wikiTextParser.parseInfoBox(sectionObject.content)
+      const values = infoBox.values
       console.log(values)
       done()
     })

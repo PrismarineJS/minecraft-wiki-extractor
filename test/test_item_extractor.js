@@ -1,10 +1,10 @@
 /* eslint-env mocha */
 
 // items tests
-var itemExtractor = require('./../lib/item_extractor.js')
+const itemExtractor = require('./../lib/item_extractor.js')
 
 describe('item_extractor', function () {
-  var date = '2015-05-07T00:00:00Z'
+  const date = '2015-05-07T00:00:00Z'
   it('get arrow infobox', function (cb) {
     itemExtractor.itemInfobox('Arrow', date, function (err, data) {
       if (err) {

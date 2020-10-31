@@ -1,14 +1,14 @@
 /* eslint-env mocha */
 
-var WikiTextParser = require('parse-wikitext')
-var wikiTextParser = new WikiTextParser('minecraft.gamepedia.com')
+const WikiTextParser = require('parse-wikitext')
+const wikiTextParser = new WikiTextParser('minecraft.gamepedia.com')
 
-var DvtParser = require('./../lib/common/dvt_template_parser.js')
+const DvtParser = require('./../lib/common/dvt_template_parser.js')
 
-var dvtParser = new DvtParser(wikiTextParser)
+const dvtParser = new DvtParser(wikiTextParser)
 
 describe('dvt parser', function () {
-  var date = '2015-10-20T00:00:00Z'
+  const date = '2015-10-20T00:00:00Z'
   // testing : several data value in the page
   it('get data value of slabs', function (cb) {
     dvtParser.wikiTextParser.getFixedArticle('Slabs', date, function (err, data) {
@@ -16,7 +16,7 @@ describe('dvt parser', function () {
         cb(err)
         return
       }
-      var sectionObject = dvtParser.wikiTextParser.pageToSectionObject(data)
+      const sectionObject = dvtParser.wikiTextParser.pageToSectionObject(data)
 
       console.log(dvtParser.processDataValues(sectionObject))
       cb()
@@ -30,7 +30,7 @@ describe('dvt parser', function () {
         cb(err)
         return
       }
-      var sectionObject = dvtParser.wikiTextParser.pageToSectionObject(data)
+      const sectionObject = dvtParser.wikiTextParser.pageToSectionObject(data)
 
       console.log(dvtParser.processDataValues(sectionObject))
       cb()
@@ -43,7 +43,7 @@ describe('dvt parser', function () {
         cb(err)
         return
       }
-      var sectionObject = dvtParser.wikiTextParser.pageToSectionObject(data)
+      const sectionObject = dvtParser.wikiTextParser.pageToSectionObject(data)
 
       dvtParser.getVariations('Cobblestone Wall', 139, sectionObject, date, function (err, variation) {
         if (err) console.log('error')
@@ -59,7 +59,7 @@ describe('dvt parser', function () {
         cb(err)
         return
       }
-      var sectionObject = dvtParser.wikiTextParser.pageToSectionObject(data)
+      const sectionObject = dvtParser.wikiTextParser.pageToSectionObject(data)
 
       dvtParser.getVariations('Stone', 1, sectionObject, date, function (err, variation) {
         if (err) console.log('error')
@@ -72,7 +72,7 @@ describe('dvt parser', function () {
   it('get variations of slabs', function (cb) {
     dvtParser.wikiTextParser.getFixedArticle('Slabs', date, function (err, data) {
       if (err) console.log('error getting slab page ' + err)
-      var sectionObject = dvtParser.wikiTextParser.pageToSectionObject(data)
+      const sectionObject = dvtParser.wikiTextParser.pageToSectionObject(data)
 
       dvtParser.getVariations('Slabs', 125, sectionObject, date, function (err, variation) {
         if (err) console.log('error getting dv page ' + err)
@@ -85,7 +85,7 @@ describe('dvt parser', function () {
   it('get variations of flowers', function (cb) {
     dvtParser.wikiTextParser.getFixedArticle('Flowers', date, function (err, data, title) {
       if (err) console.log('error getting Flower page ' + err)
-      var sectionObject = dvtParser.wikiTextParser.pageToSectionObject(data)
+      const sectionObject = dvtParser.wikiTextParser.pageToSectionObject(data)
 
       dvtParser.getVariations(title, 175, sectionObject, date, function (err, variation) {
         if (err) console.log('error getting dv page ' + err)
@@ -98,7 +98,7 @@ describe('dvt parser', function () {
   it('get variations of dye', function (cb) {
     dvtParser.wikiTextParser.getFixedArticle('Ink Sac', date, function (err, data, title) {
       if (err) console.log('error getting Dye page ' + err)
-      var sectionObject = dvtParser.wikiTextParser.pageToSectionObject(data)
+      const sectionObject = dvtParser.wikiTextParser.pageToSectionObject(data)
 
       dvtParser.getVariations(title, 351, sectionObject, date, function (err, variation) {
         if (err) console.log('error getting dv page ' + err)
@@ -111,7 +111,7 @@ describe('dvt parser', function () {
   it('get variations of carpet', function (cb) {
     dvtParser.wikiTextParser.getFixedArticle('Carpet', date, function (err, data, title) {
       if (err) console.log('error getting Carpet page ' + err)
-      var sectionObject = dvtParser.wikiTextParser.pageToSectionObject(data)
+      const sectionObject = dvtParser.wikiTextParser.pageToSectionObject(data)
       dvtParser.getVariations(title, 171, sectionObject, date, function (err, variation) {
         if (err) console.log('error getting dv page ' + err)
         console.log(variation)
