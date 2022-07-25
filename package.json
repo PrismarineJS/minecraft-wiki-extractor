@@ -12,7 +12,7 @@
     "canvas": "^2.7.0",
     "fuzzysort": "^1.1.4",
     "lua.vm.js": "^0.0.1",
-    "minecraft-data": "^2.79.0",
+    "minecraft-data": "^3.9.1",
     "parse-wikitext": "^1.0.0"
   },
   "devDependencies": {
