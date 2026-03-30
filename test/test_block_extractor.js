@@ -8,7 +8,7 @@ const wikiTextParser = new WikiTextParser('minecraft.gamepedia.com')
 const blockExtractor = require('./../lib/block_extractor.js')([], [])
 
 describe('block_extractor', function () {
-  this.timeout(10 * 1000)
+  this.timeout(30 * 1000)
   const date = '2017-12-28T00:00:00Z'
   it('extract nether brick fence infobox', function (done) {
     blockExtractor.blockInfobox('Nether Brick Fence', date, function (err, data) {

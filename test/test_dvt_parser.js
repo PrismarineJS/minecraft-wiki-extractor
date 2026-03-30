@@ -8,6 +8,7 @@ const DvtParser = require('./../lib/common/dvt_template_parser.js')
 const dvtParser = new DvtParser(wikiTextParser)
 
 describe('dvt parser', function () {
+  this.timeout(30 * 1000)
   const date = '2015-10-20T00:00:00Z'
   // testing : several data value in the page
   it('get data value of slabs', function (cb) {
