@@ -4,6 +4,7 @@
 const itemExtractor = require('./../lib/item_extractor.js')
 
 describe('item_extractor', function () {
+  this.timeout(30 * 1000)
   const date = '2015-05-07T00:00:00Z'
   it('get arrow infobox', function (cb) {
     itemExtractor.itemInfobox('Arrow', date, function (err, data) {
